@@ -64,15 +64,14 @@
     "p1.subtitle": { en:"Local-first Business Intelligence &amp; Decision Platform", th:"Local-first Business Intelligence &amp; Decision Platform" },
     "p1.role": { en:"Role: Product Developer / System Architect / BI Developer", th:"บทบาท: Product Developer / System Architect / BI Developer" },
     "p1.positioning": { en:"Business intelligence that runs from a single file — no server, no monthly subscription, no waiting on IT to approve access.", th:"Business intelligence ที่รันในไฟล์เดียว ไม่ต้องมี Server ไม่ต้องสมัครสมาชิกรายเดือน และไม่ต้องรอ IT อนุมัติ" },
-    "p1.desc": { en:"BizMind is a business intelligence and decision-support system designed to let users bring in business data, process it, analyze KPIs, surface problems, run root-cause analysis, generate decisions and produce reports — all inside one system. It's built local-first: everything runs inside the user's own browser.", th:"BizMind เป็น Business Intelligence และ Decision Support System ที่ออกแบบให้ผู้ใช้สามารถนำข้อมูลธุรกิจเข้ามาประมวลผล วิเคราะห์ KPI ตรวจสอบปัญหา วิเคราะห์ Root Cause สร้าง Decision และสร้าง Reports ได้ภายในระบบเดียว ระบบออกแบบในลักษณะ Local-first โดยประมวลผลภายใน Browser ของผู้ใช้" },
+    "p1.desc": { en:"BizMind is a business intelligence and decision-support system that turns business data into KPIs, insights and reports inside one local-first system — everything runs in the user's own browser.", th:"BizMind เป็น Business Intelligence และ Decision Support System ที่เปลี่ยนข้อมูลธุรกิจให้กลายเป็น KPI, Insight และรายงานภายในระบบเดียว ออกแบบแบบ Local-first โดยประมวลผลภายใน Browser ของผู้ใช้" },
     "p1.archTitle": { en:"System Architecture", th:"สถาปัตยกรรมระบบ" },
     "p1.featTitle": { en:"Key Features", th:"ฟีเจอร์หลัก" },
-    "p1.techTitle": { en:"Technical Highlights", th:"จุดเด่นทางเทคนิค" },
 
     "p2.name": { en:"AI Business Advisor", th:"AI Business Advisor" },
     "p2.subtitle": { en:"AI-powered Business Analysis &amp; Decision Support", th:"AI-powered Business Analysis &amp; Decision Support" },
     "p2.role": { en:"Role: Product Developer / AI System Designer / Business Solution Developer", th:"บทบาท: Product Developer / AI System Designer / Business Solution Developer" },
-    "p2.desc": { en:"AI Business Advisor is designed to use AI to help analyze data and support business decisions. It's built as a modular architecture, with responsibilities split across data analysis, business analysis, risk analysis and decision support — the goal is to move AI from a simple chatbot into a business assistant that can actually work with data and process.", th:"AI Business Advisor ถูกออกแบบเพื่อใช้ AI ช่วยวิเคราะห์ข้อมูลและสนับสนุนการตัดสินใจทางธุรกิจ ระบบออกแบบในลักษณะ Modular Architecture โดยแบ่งความรับผิดชอบออกเป็น Data Analysis, Business Analysis, Risk Analysis และ Decision Support เป้าหมายคือเปลี่ยน AI จากการเป็นเพียง Chatbot ให้กลายเป็น Business Assistant ที่ทำงานกับข้อมูลและกระบวนการทางธุรกิจได้จริง" },
+    "p2.desc": { en:"AI Business Advisor uses AI to help analyze business data and support decision-making — moving AI from a simple chatbot into an assistant that can actually work with data and process.", th:"AI Business Advisor ใช้ AI ช่วยวิเคราะห์ข้อมูลธุรกิจและสนับสนุนการตัดสินใจ เปลี่ยน AI จากการเป็นเพียง Chatbot ให้กลายเป็น Assistant ที่ทำงานกับข้อมูลและกระบวนการทางธุรกิจได้จริง" },
     "p2.conceptTitle": { en:"Concept", th:"แนวคิด" },
     "p2.capTitle": { en:"System Capabilities", th:"ความสามารถของระบบ" },
 
@@ -132,30 +131,22 @@
   ];
 
   const bizmindPipeline = {
-    en:["Data Input","Data Processing","Business Logic","Analysis & KPIs","Decision & Reporting","Output"],
-    th:["Data Input","Data Processing","Business Logic","Analysis & KPIs","Decision & Reporting","Output"]
+    en:["Data Input","Processing & Logic","Analysis & KPIs","Decision & Output"],
+    th:["Data Input","Processing & Logic","Analysis & KPIs","Decision & Output"]
   };
 
   const bizmindFeatures = [
-    { en:{h:"Data Handling", p:"Brings business data in, cleans it and checks it before use."}, th:{h:"Data Handling", p:"นำข้อมูลธุรกิจเข้าระบบ ทำความสะอาด และตรวจสอบก่อนใช้งาน"} },
-    { en:{h:"Business Rules & KPIs", p:"Configurable rules and formulas calculate the KPIs that matter."}, th:{h:"Business Rules & KPIs", p:"Rule และ Formula ที่ปรับได้ ใช้คำนวณ KPI ที่สำคัญ"} },
-    { en:{h:"Decision Support", p:"Turns KPIs into status, priority, risk and recommendations."}, th:{h:"Decision Support", p:"เปลี่ยน KPI ให้กลายเป็น Status, Priority, Risk และคำแนะนำ"} },
-    { en:{h:"Dashboards by Function", p:"Views tailored for different roles across a business."}, th:{h:"Dashboards by Function", p:"มุมมอง Dashboard ที่ออกแบบให้เหมาะกับแต่ละบทบาทในองค์กร"} },
-    { en:{h:"Investigation Tools", p:"Helps trace what's driving an abnormal result before acting on it."}, th:{h:"Investigation Tools", p:"ช่วยตรวจสอบสาเหตุของผลลัพธ์ที่ผิดปกติก่อนตัดสินใจ"} },
-    { en:{h:"Reporting & Export", p:"Produces reports in common business formats."}, th:{h:"Reporting & Export", p:"สร้างรายงานในรูปแบบที่ใช้งานได้จริงทางธุรกิจ"} }
+    { en:{h:"Data Handling", p:"Brings business data in and prepares it for analysis."}, th:{h:"Data Handling", p:"นำข้อมูลธุรกิจเข้าระบบและเตรียมพร้อมสำหรับวิเคราะห์"} },
+    { en:{h:"KPIs & Insights", p:"Turns data into the metrics and insights that matter."}, th:{h:"KPIs & Insights", p:"เปลี่ยนข้อมูลให้กลายเป็น Metric และ Insight ที่สำคัญ"} },
+    { en:{h:"Decision Support", p:"Highlights priorities and recommendations, not just numbers."}, th:{h:"Decision Support", p:"ชี้ Priority และคำแนะนำ ไม่ใช่แค่ตัวเลข"} },
+    { en:{h:"Dashboards & Reports", p:"Views and reports built for different roles across a business."}, th:{h:"Dashboards & Reports", p:"Dashboard และรายงานที่ออกแบบให้เหมาะกับแต่ละบทบาทในองค์กร"} }
   ];
 
-  const bizmindTech = [
-    { en:{h:"Verifiable Logic", p:"Business logic is designed to be predictable and auditable."}, th:{h:"Verifiable Logic", p:"ออกแบบ Business Logic ให้ตรวจสอบและคาดเดาผลลัพธ์ได้"} },
-    { en:{h:"Runs Client-side", p:"Core processing can happen entirely in the user's own browser."}, th:{h:"Runs Client-side", p:"ประมวลผลหลักสามารถทำงานได้ภายใน Browser ของผู้ใช้"} },
-    { en:{h:"Modular Design", p:"Built as independent modules so it's easier to maintain and extend."}, th:{h:"Modular Design", p:"ออกแบบเป็นโมดูลอิสระ เพื่อให้ดูแลและต่อยอดง่าย"} }
-  ];
+  const advisorConcept = { en:["Business Data","AI Analysis","Insight","Decision Support"],
+                            th:["Business Data","AI Analysis","Insight","Decision Support"] };
 
-  const advisorConcept = { en:["Business Data","Data Analysis","AI Analysis","Business Insight","Risk / Opportunity","Recommendation","Decision Support"],
-                            th:["Business Data","Data Analysis","AI Analysis","Business Insight","Risk / Opportunity","Recommendation","Decision Support"] };
-
-  const advisorCapabilities = { en:["Business Analysis","Data Analysis","AI-assisted Decision Making","Risk Analysis","Business Insight","Recommendation","Workflow Automation","AI Agent Architecture"],
-                                 th:["Business Analysis","Data Analysis","AI-assisted Decision Making","Risk Analysis","Business Insight","Recommendation","Workflow Automation","AI Agent Architecture"] };
+  const advisorCapabilities = { en:["Business Analysis","Data Analysis","AI-assisted Decision Making","Risk Analysis"],
+                                 th:["Business Analysis","Data Analysis","AI-assisted Decision Making","Risk Analysis"] };
 
   const archLayers = [
     { en:{t:"Data Input", s:"Raw business data, in whatever format it arrives."}, th:{t:"Data Input", s:"ข้อมูลดิบทางธุรกิจ ไม่ว่าจะอยู่ในรูปแบบใด"} },
@@ -311,7 +302,6 @@
     renderBuildFlow();
     renderPipeline();
     renderFeatureGrid("bizmindFeatures", bizmindFeatures);
-    renderTechGrid("bizmindTech", bizmindTech);
     renderConceptFlow();
     renderTagGrid("advisorCapabilities", advisorCapabilities);
     renderArch();
