@@ -132,32 +132,23 @@
   ];
 
   const bizmindPipeline = {
-    en:["Data Input","Data Cleaning","Validation","Rule Engine","Numbers Ledger","Formula Engine","KPI Engine","Decision Engine","Dashboard","Report / Presentation / Export"],
-    th:["Data Input","Data Cleaning","Validation","Rule Engine","Numbers Ledger","Formula Engine","KPI Engine","Decision Engine","Dashboard","Report / Presentation / Export"]
+    en:["Data Input","Data Processing","Business Logic","Analysis & KPIs","Decision & Reporting","Output"],
+    th:["Data Input","Data Processing","Business Logic","Analysis & KPIs","Decision & Reporting","Output"]
   };
 
   const bizmindFeatures = [
-    { en:{h:"Input Engine", p:"Brings data into the system and builds a working dataset."}, th:{h:"Input Engine", p:"นำข้อมูลเข้าสู่ระบบและสร้าง Dataset"} },
-    { en:{h:"Data Cleaning", p:"Header normalization, type coercion and a PII gate."}, th:{h:"Data Cleaning", p:"Normalize Header, Type Coercion และ PII Gate"} },
-    { en:{h:"Validation", p:"Checks required fields, unique keys and missing data."}, th:{h:"Validation", p:"ตรวจสอบ Required Fields, Unique Key และ Missing Data"} },
-    { en:{h:"Rule Engine", p:"Executes configurable business rules."}, th:{h:"Rule Engine", p:"ประมวลผล Business Rules"} },
-    { en:{h:"Formula Engine", p:"SUM · AVG · COUNT · COUNTIF · SUMIF · MIN · MAX · MEDIAN · STDDEV"}, th:{h:"Formula Engine", p:"รองรับ SUM · AVG · COUNT · COUNTIF · SUMIF · MIN · MAX · MEDIAN · STDDEV"} },
-    { en:{h:"KPI Engine", p:"Calculates KPIs from data and formulas."}, th:{h:"KPI Engine", p:"คำนวณ KPI จากข้อมูลและ Formula"} },
-    { en:{h:"Decision Engine", p:"Turns KPIs and rules into status, priority, risk and recommendations."}, th:{h:"Decision Engine", p:"เปลี่ยน KPI และ Rule ให้กลายเป็น Status, Priority, Risk และ Recommendation"} },
-    { en:{h:"Dashboard Engine", p:"Executive, Operations, Sales, Finance, HR, Procurement, Production, Manufacturing, Quality, Maintenance."}, th:{h:"Dashboard Engine", p:"สร้าง Dashboard สำหรับ Executive, Operations, Sales, Finance, HR, Procurement, Production, Manufacturing, Quality, Maintenance"} },
-    { en:{h:"Root Cause Analysis", p:"Helps trace the factors behind an abnormal KPI."}, th:{h:"Root Cause Analysis", p:"ช่วยตรวจสอบปัจจัยที่เกี่ยวข้องกับ KPI ที่ผิดปกติ"} },
-    { en:{h:"Scenario Simulation", p:"Tests a fix without touching the real data."}, th:{h:"Scenario Simulation", p:"จำลองการแก้ปัญหาโดยไม่แก้ไขข้อมูลจริง"} },
-    { en:{h:"Report Engine", p:"Executive, Management, Department, Operational and Board reports."}, th:{h:"Report Engine", p:"สร้าง Executive, Management, Department, Operational และ Board Report"} },
-    { en:{h:"Export Engine", p:"Excel · CSV · JSON · PDF · PNG · HTML · Markdown · Print"}, th:{h:"Export Engine", p:"รองรับ Excel · CSV · JSON · PDF · PNG · HTML · Markdown · Print"} }
+    { en:{h:"Data Handling", p:"Brings business data in, cleans it and checks it before use."}, th:{h:"Data Handling", p:"นำข้อมูลธุรกิจเข้าระบบ ทำความสะอาด และตรวจสอบก่อนใช้งาน"} },
+    { en:{h:"Business Rules & KPIs", p:"Configurable rules and formulas calculate the KPIs that matter."}, th:{h:"Business Rules & KPIs", p:"Rule และ Formula ที่ปรับได้ ใช้คำนวณ KPI ที่สำคัญ"} },
+    { en:{h:"Decision Support", p:"Turns KPIs into status, priority, risk and recommendations."}, th:{h:"Decision Support", p:"เปลี่ยน KPI ให้กลายเป็น Status, Priority, Risk และคำแนะนำ"} },
+    { en:{h:"Dashboards by Function", p:"Views tailored for different roles across a business."}, th:{h:"Dashboards by Function", p:"มุมมอง Dashboard ที่ออกแบบให้เหมาะกับแต่ละบทบาทในองค์กร"} },
+    { en:{h:"Investigation Tools", p:"Helps trace what's driving an abnormal result before acting on it."}, th:{h:"Investigation Tools", p:"ช่วยตรวจสอบสาเหตุของผลลัพธ์ที่ผิดปกติก่อนตัดสินใจ"} },
+    { en:{h:"Reporting & Export", p:"Produces reports in common business formats."}, th:{h:"Reporting & Export", p:"สร้างรายงานในรูปแบบที่ใช้งานได้จริงทางธุรกิจ"} }
   ];
 
   const bizmindTech = [
-    { en:{h:"Deterministic Business Logic", p:"Business logic is designed to be verifiable and repeatable."}, th:{h:"Deterministic Business Logic", p:"ออกแบบให้ Business Logic สามารถตรวจสอบและทำซ้ำได้"} },
-    { en:{h:"Numbers Ledger", p:"A single ledger acts as the source of truth for every calculation."}, th:{h:"Numbers Ledger", p:"ใช้ Ledger เป็นแหล่งข้อมูลกลางสำหรับผลการคำนวณ"} },
-    { en:{h:"AST Rule Engine", p:"Rules are parsed and executed via an AST — no eval() or new Function().", code:"eval() / new Function() — not used"}, th:{h:"AST Rule Engine", p:"ใช้ AST สำหรับประมวลผล Business Rules แทนการใช้", code:"eval() / new Function() — ไม่ถูกใช้งาน"} },
-    { en:{h:"Local-first Architecture", p:"Data can be processed entirely on the user's own machine."}, th:{h:"Local-first Architecture", p:"ข้อมูลสามารถประมวลผลภายในเครื่องของผู้ใช้"} },
-    { en:{h:"Offline-first", p:"The core workflow doesn't depend on a central server."}, th:{h:"Offline-first", p:"ระบบไม่จำเป็นต้องพึ่ง Server กลางสำหรับ Core Workflow"} },
-    { en:{h:"Modular Engine", p:"Split into independent engines so each part is easy to extend."}, th:{h:"Modular Engine", p:"ระบบถูกแยกเป็น Engine หลายส่วนเพื่อให้ง่ายต่อการพัฒนาและต่อยอด"} }
+    { en:{h:"Verifiable Logic", p:"Business logic is designed to be predictable and auditable."}, th:{h:"Verifiable Logic", p:"ออกแบบ Business Logic ให้ตรวจสอบและคาดเดาผลลัพธ์ได้"} },
+    { en:{h:"Runs Client-side", p:"Core processing can happen entirely in the user's own browser."}, th:{h:"Runs Client-side", p:"ประมวลผลหลักสามารถทำงานได้ภายใน Browser ของผู้ใช้"} },
+    { en:{h:"Modular Design", p:"Built as independent modules so it's easier to maintain and extend."}, th:{h:"Modular Design", p:"ออกแบบเป็นโมดูลอิสระ เพื่อให้ดูแลและต่อยอดง่าย"} }
   ];
 
   const advisorConcept = { en:["Business Data","Data Analysis","AI Analysis","Business Insight","Risk / Opportunity","Recommendation","Decision Support"],
