@@ -477,7 +477,8 @@ p.section-lead{ color:var(--text-dim); font-size:17px; max-width:640px; margin-t
 .contact-box p{ position:relative; color:var(--text-dim); font-size:16.5px; max-width:600px; margin:18px auto 0; line-height:1.8; }
 .contact-ctas{ position:relative; display:flex; justify-content:center; gap:14px; margin-top:32px; flex-wrap:wrap; }
 .contact-channels{ position:relative; display:flex; justify-content:center; gap:28px; margin-top:36px; flex-wrap:wrap; }
-.contact-channel{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:13.5px; color:var(--text-dim); }
+.contact-channel{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:13.5px; color:var(--text-dim); transition:color .2s ease; }
+.contact-channel:hover{ color:var(--accent); }
 .contact-channel svg{ width:16px; height:16px; color:var(--accent); }
 
 /* -------------------- FOOTER -------------------- */

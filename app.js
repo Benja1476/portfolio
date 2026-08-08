@@ -9,7 +9,7 @@
      1. i18n dictionary (static, data-i18n bound elements)
      --------------------------------------------------------- */
   const dict = {
-    "brand.name": { en:"[Your Name]", th:"[ชื่อของคุณ]" },
+    "brand.name": { en:"Benjamin", th:"Benjamin" },
     "nav.home": { en:"Home", th:"หน้าแรก" },
     "nav.about": { en:"About", th:"เกี่ยวกับผม" },
     "nav.skills": { en:"Skills", th:"ทักษะ" },
