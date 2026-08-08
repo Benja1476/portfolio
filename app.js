@@ -449,7 +449,52 @@
   }
 
   /* ---------------------------------------------------------
-     11. Boot
+     11. Content protection (deterrent-level only)
+     Blocks casual right-click / copy / devtools shortcuts and
+     shows a toast. This cannot stop a determined person from
+     viewing page source — it just raises the bar for casual
+     copy-pasting of the page content.
+     --------------------------------------------------------- */
+  function initContentProtection(){
+    var toast = document.getElementById("copyToast");
+    var toastTimer = null;
+    function showToast(){
+      if(!toast) return;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 1800);
+    }
+
+    document.addEventListener("contextmenu", function(e){
+      if(e.target.closest("[data-selectable]")) return;
+      e.preventDefault();
+      showToast();
+    });
+
+    document.addEventListener("copy", function(e){
+      if(e.target.closest && e.target.closest("[data-selectable], .contact-box, input, textarea")) return;
+      e.preventDefault();
+      showToast();
+    });
+
+    document.addEventListener("dragstart", function(e){
+      if(e.target.tagName === "IMG" || e.target.tagName === "SVG") e.preventDefault();
+    });
+
+    document.addEventListener("keydown", function(e){
+      var k = e.key ? e.key.toLowerCase() : "";
+      var blockCombo = (e.ctrlKey || e.metaKey) && (k === "u" || k === "s" || (e.shiftKey && (k === "i" || k === "j" || k === "c")));
+      if(k === "f12" || blockCombo){
+        e.preventDefault();
+        showToast();
+      }
+    });
+
+    console.log("%cContent on this site is © Benjamin. Please don't copy or redistribute without permission.", "color:#7dd3c8;font-weight:600;font-size:12px;");
+  }
+
+  /* ---------------------------------------------------------
+     12. Boot
      --------------------------------------------------------- */
   applyTheme();
   root.setAttribute("data-lang", lang);
@@ -458,5 +503,6 @@
   onScroll();
   animateCounters();
   animateFlowDot();
+  initContentProtection();
 
 })();
